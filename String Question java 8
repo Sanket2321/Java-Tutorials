@@ -1,0 +1,14 @@
+//remove the duplicate character from the string
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+class Main {
+    public static void main(String[] args) {
+        String s1 = "goood";
+        List<String> s2 = Stream.of(s1.split(""))
+                                .distinct()
+                                .collect(Collectors.toList());
+        System.out.println(s2);
+    }
+}
